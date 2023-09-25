@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+import { IReplyTo, ITweetMedia } from "../TweetExtra";
+
 /**
  * Mandatory variables that must be sent as a URL-encoded, stringified-JSON.
  *
@@ -20,8 +22,8 @@ export interface IVariables {
 	withVoice: boolean;
 	withCommunity: boolean;
 
-	media?: string;
-  	reply?: string;
+	media?: ITweetMedia;
+  	reply?: IReplyTo;
 
 	/** @returns The string representation of 'this' data. */
 	toString(): string;

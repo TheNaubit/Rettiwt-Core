@@ -1,4 +1,5 @@
 // TYPES
+import { IReplyTo, ITweetMedia } from '../TweetExtra';
 import { ITweetFilter } from './TweetFilter';
 
 /**
@@ -22,6 +23,6 @@ export interface IArgs {
 	/** The text for the tweet to be created. */
 	tweetText?: string;
 
-	media?: string;
-  	reply?: string;
+	media?: ITweetMedia;
+  	reply?: IReplyTo;
 }

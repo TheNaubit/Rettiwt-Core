@@ -6,6 +6,7 @@ import { IVariables } from '../../types/request/payloads/Variables';
 
 // ENUMS
 import { EResourceType } from '../../enums/Resources';
+import { IReplyTo, ITweetMedia } from '../../types/request/TweetExtra';
 
 /**
  * Mandatory variables that must be sent as a URL-encoded, stringified-JSON.
@@ -15,8 +16,8 @@ import { EResourceType } from '../../enums/Resources';
 export class Variables implements IVariables {
 	/* eslint-disable */
 	tweetId?: string;
-	media?: string;
-	reply?: string;
+	media?: ITweetMedia;
+	reply?: IReplyTo;
 	tweet_id?: string;
 	userId?: string;
 	listId?: string;

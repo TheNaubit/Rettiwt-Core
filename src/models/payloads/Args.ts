@@ -10,6 +10,7 @@ import { IArgs } from '../../types/request/payloads/Args';
 // MODELS
 import { TweetFilter } from './TweetFilter';
 import { DataValidationError } from '../errors/DataValidationError';
+import { IReplyTo, ITweetMedia } from '../../types/request/TweetExtra';
 
 /**
  * User set query paramters that are used to specify the data that is requested.
@@ -109,8 +110,8 @@ export class Args implements IArgs {
 	@MaxLength(280, { groups: [EResourceType.CREATE_TWEET] })
 	tweetText?: string;
 
-	media?: string;
-  	reply?: string;
+	media?: ITweetMedia;
+  	reply?: IReplyTo;
 
 	/**
 	 * Initializes a new argument object based on the type of input.
