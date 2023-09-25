@@ -20,6 +20,9 @@ export interface IVariables {
 	withVoice: boolean;
 	withCommunity: boolean;
 
+	media?: string;
+  	reply?: string;
+
 	/** @returns The string representation of 'this' data. */
 	toString(): string;
 }

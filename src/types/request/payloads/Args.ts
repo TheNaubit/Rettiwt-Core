@@ -21,4 +21,7 @@ export interface IArgs {
 
 	/** The text for the tweet to be created. */
 	tweetText?: string;
+
+	media?: string;
+  	reply?: string;
 }

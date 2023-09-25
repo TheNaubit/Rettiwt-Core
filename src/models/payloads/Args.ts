@@ -109,6 +109,9 @@ export class Args implements IArgs {
 	@MaxLength(280, { groups: [EResourceType.CREATE_TWEET] })
 	tweetText?: string;
 
+	media?: string;
+  	reply?: string;
+
 	/**
 	 * Initializes a new argument object based on the type of input.
 	 *
@@ -120,6 +123,8 @@ export class Args implements IArgs {
 		this.count = args.count ?? 20;
 		this.cursor = args.cursor;
 		this.tweetText = args.tweetText;
+		this.media = args.media;
+		this.reply = args.reply;
 
 		/**
 		 * Initializing filter only if resource type is TWEET_SEARCH
